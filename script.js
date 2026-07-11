@@ -77,9 +77,12 @@ const today = new Date().toLocaleDateString("en-US",{
 
 const discount = discounts[today];
 
-document.getElementById("current-day").textContent = today;
 
-document.getElementById("discount-percent").textContent = discount + "% OFF";
+document.getElementById("starter-discount").textContent = discount + "% OFF";
+
+document.getElementById("standard-discount").textContent = discount + "% OFF";
+
+document.getElementById("premium-discount").textContent = discount + "% OFF";
 
 function updatePrice(original, discount){
 
