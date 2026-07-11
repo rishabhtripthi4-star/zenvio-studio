@@ -104,34 +104,34 @@ document.getElementById("premium-price").textContent="$"+updatePrice(pricing.pre
 
 const countdown = document.getElementById("countdown");
 
-function updateCountdown() {
+if (countdown) {
 
-    const now = new Date();
+    function updateCountdown() {
 
-    const tomorrow = new Date();
+        const now = new Date();
 
-    tomorrow.setDate(now.getDate() + 1);
+        const tomorrow = new Date(now);
 
-    tomorrow.setHours(0, 0, 0, 0);
+        tomorrow.setHours(24, 0, 0, 0);
 
-    const diff = tomorrow - now;
+        const difference = tomorrow - now;
 
-    const hours = Math.floor(diff / (1000 * 60 * 60));
+        const hours = Math.floor(difference / (1000 * 60 * 60));
 
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
 
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    countdown.textContent =
-        String(hours).padStart(2, "0") + ":" +
-        String(minutes).padStart(2, "0") + ":" +
-        String(seconds).padStart(2, "0");
+        countdown.textContent =
+            `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
 
 }
-
-updateCountdown();
-
-setInterval(updateCountdown, 1000);
 //==================================
 // FAQ Accordion
 //==================================
