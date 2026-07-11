@@ -3641,3 +3641,95 @@ section{
     transform:translateY(-4px);
 
 }
+/*=========================================
+        FINAL SPACING POLISH
+=========================================*/
+
+section{
+
+    padding:120px 0;
+
+}
+
+.section-header{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.section-header h2{
+
+    margin:18px 0 24px;
+
+}
+
+.section-header p{
+
+    max-width:650px;
+
+    margin:0 auto;
+
+}
+
+.pricing-grid,
+.services-grid,
+.countries-grid,
+.why-grid,
+.testimonial-grid,
+.tech-grid{
+
+    margin-top:60px;
+
+}
+
+.offer-wrapper{
+
+    margin-top:60px;
+
+}
+
+.contact-wrapper{
+
+    margin-top:60px;
+
+}
+
+.footer-grid{
+
+    margin-bottom:70px;
+
+}
+
+.pricing-features li,
+.footer-column li{
+
+    margin-bottom:14px;
+
+}
+
+.cta-buttons,
+.hero-buttons{
+
+    margin-top:35px;
+
+    gap:20px;
+
+}
+
+h1,
+h2,
+h3{
+
+    line-height:1.2;
+
+}
+
+p{
+
+    line-height:1.8;
+
+}
